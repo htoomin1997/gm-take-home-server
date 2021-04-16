@@ -21,6 +21,4 @@ Thank you for taking the time to read this and review my code, I hope that it is
 
 Something that I want to note is that my local keychain points to hm1487 which is an old github account that I no longer want to use, but I want to point out that that is still my account and that this is all my work!
 
-I changed my account at the end to show this!
-
 ~Htoo Min
