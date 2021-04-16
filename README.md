@@ -4,6 +4,10 @@ Hello! This is the server piece to the Giant Machines take home. This should be 
 
 Because there is no sensitive information, I have included the connection string directly, but I cannot stress enough how this should be put in an env file usually.
 
+Something that I did not anticipate, is that Big Sur actually messed up a lot of my dbs. Both Mongo and Postgres stopped working after the update!!! :(
+
+I ended up using the Cloud version of mongo because you can create a free cluster. Because there is no information in here that is too sensitive, I have kept the connection string in the code itself, but that should usually be put in a .env file to be git ignored.
+
 The largest dependency is the csv parser that I downloaded to help facilitate easier csv parsing.
 
 The build environment is MacOS for this server as well.
