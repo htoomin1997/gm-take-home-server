@@ -3,6 +3,7 @@ const Timesheet = mongoose.model("Timesheet")
 const fs = require("fs").promises;
 const parse = require("csv-parse/lib/sync");
 
+//Uses insert many because of the size of the records that are being inserted
 const convertCSV = async () => {
     try{
         const result = await fs.readFile(__dirname + "/sample_data.csv")
@@ -34,6 +35,7 @@ const convertCSV = async () => {
     }
 }
 
+//Gets every record for display on the front end
 const getRecords = async () => {
     try {
         const records = await Timesheet.find();
@@ -44,6 +46,7 @@ const getRecords = async () => {
     
 }
 
+//Single insert of a record
 const insertRecord = async (postedRecord) => {
     try {
         const newEntry = new Timesheet(postedRecord);
