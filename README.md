@@ -6,7 +6,7 @@ The largest dependency is the csv parser that I downloaded to help facilitate ea
 
 The build environment is MacOS for this server as well.
 
-=====Running instructions======\n
+=====Running instructions======  
 Before running for the first time, make sure to run "npm install" to install all the dependencies.
 Afterwards, go ahead and run "npm start" to start the server up.
 
