@@ -6,13 +6,15 @@ Because there is no sensitive information, I have included the connection string
 
 Something that I did not anticipate, is that Big Sur actually messed up a lot of my dbs. Both Mongo and Postgres stopped working after the update!!! :(
 
-I ended up using the Cloud version of mongo because you can create a free cluster. Because there is no information in here that is too sensitive, I have kept the connection string in the code itself, but that should usually be put in a .env file to be git ignored.
+In the interest of time, ended up using the Cloud version of Mongo because you can create a free cluster. Because there is no information in here that is too sensitive, I have kept the connection string in the code itself, but that should usually be put in a .env file to be git ignored. Hopefully using this cluster is not an issue.
 
 The largest dependency is the csv parser that I downloaded to help facilitate easier csv parsing.
 
 The build environment is MacOS for this server as well.
 
 =====Running instructions======  
+Assuming that NPM is installed in the local machine  
+
 Before running for the first time, make sure to run "npm install" to install all the dependencies.
 Afterwards, go ahead and run "npm start" to start the server up.
 

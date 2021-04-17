@@ -7,7 +7,6 @@ const responseWrapper = require("./responseWrapper");
 //Gets all of the timesheet data from the timesheet table
 router.get("/records", async (req,res) => {
     try {
-        console.log("in the records")
         timesheet.getRecords().then((payload) => {
             res.send(responseWrapper.successWrapper(payload))
         }); 
