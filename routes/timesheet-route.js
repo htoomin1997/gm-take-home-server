@@ -20,18 +20,17 @@ router.get("/records", async (req,res) => {
 //Creates a single record based on a request
 router.post("/create-record", async (req, res) => {
     try {
-        console.log(req.query);
         await timesheet.insertRecord(req.query);
         res.send(responseWrapper.successWrapper("Item inserted successfully."))
     } catch (err) {
-        res.send(responseWrapper.serverErrorWrapper(payload))
+        res.send(responseWrapper.serverErrorWrapper(err))
     }
 });
 
 
 //Creates records based off of the sample_data.csv which is the csv provided
 //For some reason, I couldn't path to a file outside of the current folder, which is why the csv is in controllers... 
-router.get("/add-information", async (req,res) => {
+router.post("/add-information", async (req,res) => {
     try {
         timesheet.convertCSV().then((payload) => {
             if (payload === true){
@@ -45,5 +44,18 @@ router.get("/add-information", async (req,res) => {
         res.send(responseWrapper.serverErrorWrapper(err));
     }
 })
+
+//Assuming that the data will be passed in params
+//Also assuming that the user is following the parameters set forth by the schema
+//Creates a single record based on a request
+router.post("/drop-records", async (req, res) => {
+    try {
+        await timesheet.deleteRecords();
+        res.send(responseWrapper.successWrapper("Database has been cleared"))
+    } catch (err) {
+        res.send(responseWrapper.serverErrorWrapper(err))
+    }
+});
+
 
 module.exports = router;

@@ -8,7 +8,9 @@ Something that I did not anticipate, is that Big Sur actually messed up a lot of
 
 In the interest of time, ended up using the Cloud version of Mongo because you can create a free cluster. Because there is no information in here that is too sensitive, I have kept the connection string in the code itself, but that should usually be put in a .env file to be git ignored. Hopefully using this cluster is not an issue.
 
-The largest dependency is the csv parser that I downloaded to help facilitate easier csv parsing.
+The largest dependency is the csv parser that I downloaded to help facilitate easier csv parsing. Also, if you would like to add the csv information I have included an endpoint for that as well. It was easier for me to do so for development purposes, so please use this as you would like. 
+
+For further testing purposes, I have included an endpoint to drop the database and start fresh. Please feel free to use this endpoint!
 
 The build environment is MacOS for this server as well.
 

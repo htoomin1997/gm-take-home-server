@@ -56,8 +56,18 @@ const insertRecord = async (postedRecord) => {
     }
 }
 
+const deleteRecords = async () => {
+    try {
+        await Timesheet.deleteMany({});
+        return;
+    } catch(err){
+        return err;
+    }
+}
+
 module.exports = {
     convertCSV: convertCSV,
     getRecords: getRecords,
-    insertRecord: insertRecord
+    insertRecord: insertRecord,
+    deleteRecords: deleteRecords
 }
